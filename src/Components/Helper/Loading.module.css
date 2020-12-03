@@ -1,0 +1,24 @@
+.loading {
+  height: 4px;
+  background: black;
+  overflow: hidden;
+  max-width: 25%;
+  margin: 4rem auto;
+}
+
+.loading::after {
+  content: '';
+  display: block;
+  width: 75%;
+  height: 4px;
+  background: white;
+  animation: loading 1s linear forwards infinite;
+}
+@keyframes loading {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(125%);
+  }
+}
